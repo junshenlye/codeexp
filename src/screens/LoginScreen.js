@@ -1,49 +1,33 @@
-import React from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, TextInput, Text, TouchableOpacity } from 'react-native';
+import loginStyle from '../Login/LoginStyles';
+import { handleLogin } from '../Login/Login';
 
 const LoginScreen = () => {
-  const handleLogin = () => {
-    // Handle login logic here
-  };
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+    <View style={loginStyle.container}>
+        <Text style={loginStyle.title}>Login</Text>
       <TextInput
-        style={styles.input}
+        style={loginStyle.input}
         placeholder="Email"
-        // Add onChangeText and value props for email input
+        value={email}
+        onChangeText={text => setEmail(text)}
       />
       <TextInput
-        style={styles.input}
+        style={loginStyle.input}
         placeholder="Password"
-        // Add onChangeText and value props for password input
         secureTextEntry
+        value={password}
+        onChangeText={text => setPassword(text)}
       />
-      <Button title="Login" onPress={handleLogin} />
+      <TouchableOpacity style={loginStyle.button} onPress={() => handleLogin(email,password)}>
+        <Text style={loginStyle.buttonText}>Login</Text>
+      </TouchableOpacity>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  input: {
-    width: '80%',
-    height: 40,
-    borderWidth: 1,
-    borderColor: 'gray',
-    marginBottom: 10,
-    padding: 10,
-  },
-});
 
 export default LoginScreen;
