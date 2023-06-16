@@ -1,9 +1,9 @@
 import React from 'react';
-import LoginScreen from './src/screens/ProfileScreen';
+import NewScreen from './src/screens/NewScreen';
 
 const App = () => {
   return (
-    < />
+    <NewScreen />
   );
 };
 
