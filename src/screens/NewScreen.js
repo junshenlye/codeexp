@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image, Linking } from 'react-native';
-import { getArticles } from '../News/news';
+import { getArticles } from '../News/News';
 import { styles } from '../News/Newstyles';
 import { Card } from "react-native-paper";
 
