@@ -3,7 +3,7 @@ import NewScreen from './src/screens/NewScreen';
 
 const App = () => {
   return (
-    <NewScreen />
+    <NewScreen/>
   );
 };
 

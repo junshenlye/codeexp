@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, View, Text, TouchableOpacity, Image, Lin } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, Linking } from 'react-native';
 import { getArticles } from '../News/news';
 import { styles } from '../News/Newstyles';
 import { Card } from "react-native-paper";
@@ -19,10 +19,14 @@ const NewScreen = () => {
   return (
     <>
     <View>
-    <View style={styles.topBar}>
-        </View>
+      <View style={styles.topBar}></View>
       {Object.keys(data).length > 0 && (
         <ScrollView>
+          <View style={styles.dashboardcontainer}>
+            <View style={styles.cardContainer}>
+              
+            </View>
+          </View>
           <View style={styles.container}>
             {data.articles.map((article, index) => (
               <Card key={index}>
@@ -38,7 +42,7 @@ const NewScreen = () => {
               </Card>
             ))}
           </View>
-          <View style={styles.topBar}></View>
+          <View style={styles.bottomBar}></View>
         </ScrollView>
       )}
     </View>

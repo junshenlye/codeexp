@@ -4,8 +4,15 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 20,
-    marginTop: 10,
   },
+
+  dashboardcontainer: {
+    flex: 1,
+    height: 300,
+    marginTop: 10,
+    marginHorizontal: 20,
+  },
+
   cardContainer: {
     backgroundColor: '#fff',
     borderRadius: 10,
@@ -32,4 +39,21 @@ export const styles = StyleSheet.create({
     height: 35,
     backgroundColor: '#fff',
   },
+  bottomBar: {
+    height: 35,
+    backgroundColor: '#fff',
+  },
+
+  dashboardcard:{
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    padding: 10,
+    marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+
 });
