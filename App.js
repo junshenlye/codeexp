@@ -1,9 +1,17 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
-import NewScreen from './src/screens/NewScreen';
+
+import { NavigationContainer } from '@react-navigation/native';
+import NavigationDrawer from './src/Navigation/Drawer';
 
 const App = () => {
   return (
-    <NewScreen/>
+    <>
+      <NavigationContainer>
+        <NavigationDrawer />
+      </NavigationContainer>
+    </>
   );
 };
 
