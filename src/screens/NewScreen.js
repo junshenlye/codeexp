@@ -19,7 +19,6 @@ const NewScreen = () => {
   return (
     <>
     <View>
-      <View style={styles.topBar}></View>
       {Object.keys(data).length > 0 && (
         <ScrollView>
           <View style={styles.dashboardcontainer}>
