@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text, ImageBackground } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
 import { styles } from '../CareerLand/CareerLandStyle';
 import image from '../../assets/image.png';
 
 const CareerLandScreen = () => {
   const handleCheckpointPress = (checkpoint) => {
-    // Code to handle checkpoint press
     console.log(`Checkpoint ${checkpoint} pressed!`);
   };
 
@@ -13,9 +12,13 @@ const CareerLandScreen = () => {
     const checkpoints = [1, 2, 3]; // Example checkpoints
 
     return checkpoints.map((checkpoint) => (
-      <View key={checkpoint} style={styles.checkpoint}>
+      <TouchableOpacity
+        key={checkpoint}
+        style={styles.checkpoint}
+        onPress={() => handleCheckpointPress(checkpoint)}
+      >
         <Text style={styles.checkpointText}>{checkpoint}</Text>
-      </View>
+      </TouchableOpacity>
     ));
   };
 
