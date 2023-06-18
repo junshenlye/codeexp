@@ -4,6 +4,7 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerI
 
 import NewScreen from '../screens/NewScreen';
 import LoginScreen from '../screens/LoginScreen';
+import CareerLandScreen from '../screens/CareerLandScreen';
 
 const DrawerTabs = [{
   name: "News Feed",
@@ -11,7 +12,7 @@ const DrawerTabs = [{
 },
 {
   name: "Career Land",
-  component: LoginScreen
+  component: CareerLandScreen
 },
 {
   name: "Diary",

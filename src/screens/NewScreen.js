@@ -22,8 +22,8 @@ const NewScreen = () => {
       {Object.keys(data).length > 0 && (
         <ScrollView>
           <View style={styles.dashboardcontainer}>
+            
             <View style={styles.cardContainer}>
-              
             </View>
           </View>
           <View style={styles.container}>
