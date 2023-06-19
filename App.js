@@ -18,7 +18,7 @@ const App = () => {
           screenOptions={{
             headerShown: false
           }}>
-          <Stack.Screen name="Home" component={NavigationDrawer} />
+          <Stack.Screen name="NavigationDrawer" component={NavigationDrawer} />
           <Stack.Screen name="Recommendations" component={RecommendationScreen} />
         </Stack.Navigator>
       </NavigationContainer>

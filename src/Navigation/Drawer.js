@@ -2,13 +2,13 @@ import { View, Text, Linking } from 'react-native';
 
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 
-import NewScreen from '../screens/NewScreen';
+import DashboardScreen from '../screens/DashboardScreen';
 import LoginScreen from '../screens/LoginScreen';
 import CareerLandScreen from '../screens/CareerLandScreen';
 
 const DrawerTabs = [{
-  name: "News Feed",
-  component: NewScreen
+  name: "Dashboard",
+  component: DashboardScreen
 },
 {
   name: "Career Land",

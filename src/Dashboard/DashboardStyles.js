@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
 
   dashboardcontainer: {
     flex: 1,
-    height: 300,
     marginTop: 10,
     marginHorizontal: 20,
   },
