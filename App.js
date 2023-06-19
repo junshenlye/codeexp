@@ -3,13 +3,24 @@ import 'react-native-gesture-handler';
 import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
 import NavigationDrawer from './src/Navigation/Drawer';
+import RecommendationScreen from './src/screens/RecommendationScreen';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <>
       <NavigationContainer>
-        <NavigationDrawer />
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}>
+          <Stack.Screen name="Home" component={NavigationDrawer} />
+          <Stack.Screen name="Recommendations" component={RecommendationScreen} />
+        </Stack.Navigator>
       </NavigationContainer>
     </>
   );
