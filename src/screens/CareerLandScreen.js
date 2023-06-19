@@ -8,9 +8,9 @@ import image1 from '../../assets/image1.png';
 const CareerLandScreen = () => {
   const renderCheckpoints = () => {
     const checkpoints = [
-      { id: 1, image: image1, heading: 'Checkpoint 1', top: 50, left: 20 },
+      { id: 1, image: image1, heading: 'SkillPath 1', top: 80, left: 43 },
       { id: 2, image: image1, heading: 'Checkpoint 2', top: 80, left: 78 },
-      { id: 3, image: image1, heading: 'Checkpoint 3', top: -150, left: -145 }
+      { id: 3, image: image1, heading: 'Checkpoint 3', top: -125, left: 0 }
     ]; // Example checkpoints
 
     return checkpoints.map((checkpoint) => (
@@ -22,8 +22,8 @@ const CareerLandScreen = () => {
         ]}
         onPress={() => handleCheckpointPress(checkpoint.id)}
       >
-        <Image source={checkpoint.image} style={styles.checkpointImage} />
         <Text style={styles.checkpointHeading}>{checkpoint.heading}</Text>
+        <Image source={checkpoint.image} style={styles.checkpointImage} />
       </TouchableOpacity>
     ));
   };
