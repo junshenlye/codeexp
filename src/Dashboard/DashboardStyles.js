@@ -4,17 +4,18 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 20,
+    marginBottom: 15,
   },
 
   dashboardcontainer: {
     flex: 1,
-    marginTop: 10,
+    marginTop: 15,
     marginHorizontal: 20,
   },
-
+ 
   cardContainer: {
     backgroundColor: '#fff',
-    borderRadius: 10,
+    borderRadius: 20,
     padding: 10,
     marginBottom: 10,
     shadowColor: '#000',
@@ -31,21 +32,12 @@ export const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 200,
-    borderRadius: 10,
+    borderRadius: 20,
     marginBottom: 10,
   },
-  topBar: {
-    height: 35,
-    backgroundColor: '#fff',
-  },
-  bottomBar: {
-    height: 35,
-    backgroundColor: '#fff',
-  },
-
   dashboardcard:{
     backgroundColor: '#fff',
-    borderRadius: 10,
+    borderRadius: 20,
     padding: 10,
     marginBottom: 10,
     shadowColor: '#000',
@@ -54,5 +46,4 @@ export const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 2,
   },
-
 });

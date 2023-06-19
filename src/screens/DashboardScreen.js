@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image, Linking } from 'react-native';
-import { Card } from "react-native-paper";
 
 import { getArticles } from '../Dashboard/Dashboard';
 import { styles } from '../Dashboard/DashboardStyles';
@@ -43,8 +42,7 @@ const DashboardScreen = ({ navigation }) => {
             </View>
             <View style={styles.container}>
               {data.articles.map((article, index) => (
-                <Card key={index}>
-                  <TouchableOpacity onPress={() => handleNewsPress(article.url)}>
+                  <TouchableOpacity key={index} onPress={() => handleNewsPress(article.url)}>
                     <View style={styles.cardContainer}>
                       <Text style={styles.title}>{article.title}</Text>
                       <Image
@@ -53,10 +51,8 @@ const DashboardScreen = ({ navigation }) => {
                       />
                     </View>
                   </TouchableOpacity>
-                </Card>
               ))}
             </View>
-            <View style={styles.bottomBar}></View>
           </ScrollView>
         )}
       </View>
