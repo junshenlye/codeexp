@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
+      flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       },
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
       },
     
-        image:{
+      image:{
         flex: 1,
         resizeMode: 'cover', // or 'stretch' if you want the image to stretch to fill the screen
         position: 'absolute',
@@ -37,10 +37,7 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
       },
       checkpoint: {
-        width: 24,
-        height: 24,
         borderRadius: 12,
-        backgroundColor: 'white',
         marginHorizontal: 8,
         justifyContent: 'center',
         alignItems: 'center',
@@ -49,5 +46,13 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold',
         color: 'black',
+      },
+
+      checkpointImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 50,
+        resizeMode: 'cover', // Adjust the resizeMode property as needed
+        // Add any additional styles you want to apply to the checkpoint image
       },
 });

@@ -1,4 +1,3 @@
-const handleCheckpointPress = (checkpoint) => {
-    // Code to handle checkpoint press
-    console.log(`Checkpoint ${checkpoint} pressed!`);
-  };
+export const handleCheckpointPress = (checkpoint) => {
+  console.log(`Checkpoint ${checkpoint} pressed!`);
+};

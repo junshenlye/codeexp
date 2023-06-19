@@ -1,23 +1,26 @@
 import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, Image } from 'react-native';
 import { styles } from '../CareerLand/CareerLandStyle';
 import image from '../../assets/image.png';
+import { handleCheckpointPress } from '../CareerLand/CareerLand';
+import image1 from '../../assets/image1.png';
 
 const CareerLandScreen = () => {
-  const handleCheckpointPress = (checkpoint) => {
-    console.log(`Checkpoint ${checkpoint} pressed!`);
-  };
-
   const renderCheckpoints = () => {
-    const checkpoints = [1, 2, 3]; // Example checkpoints
+    const checkpoints = [
+      { id: 1, image: image1, heading: 'Checkpoint 1' },
+      { id: 2, image: image1, heading: 'Checkpoint 2' },
+      { id: 3, image: image1, heading: 'Checkpoint 3' }
+    ]; // Example checkpoints
 
     return checkpoints.map((checkpoint) => (
       <TouchableOpacity
-        key={checkpoint}
+        key={checkpoint.id}
         style={styles.checkpoint}
-        onPress={() => handleCheckpointPress(checkpoint)}
+        onPress={() => handleCheckpointPress(checkpoint.id)}
       >
-        <Text style={styles.checkpointText}>{checkpoint}</Text>
+        <Image source={checkpoint.image} style={styles.checkpointImage} />
+        <Text style={styles.checkpointHeading}>{checkpoint.heading}</Text>
       </TouchableOpacity>
     ));
   };
