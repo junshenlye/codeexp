@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 const colorDebug = false;
@@ -6,15 +6,15 @@ const paddingTopSpacer = 10;
 
 // Updated by Endpoint (This is Template Data)
 const ObjectivesArray = [{
-    name: "Touch Grass",
+    name: "Login",
     current: 2,
     max: 4,
 }, {
-    name: "Read Articles",
+    name: "Articles",
     current: 1,
     max: 3,
 }, {
-    name: "Diary Entry",
+    name: "Diary",
     current: 1,
     max: 1,
 }]
@@ -34,6 +34,8 @@ const ObjectiveStyle = StyleSheet.create({
 
 function Objective({ item }) {
     const fill = Math.round((item.current / item.max) * 100);
+
+    const tintColor = fill == 100 ? '#4C5EB7' : '#8590C8';
     return (
         <>
             <View style={ObjectiveStyle.container}>
@@ -43,16 +45,16 @@ function Objective({ item }) {
                         size={65}
                         width={8}
                         fill={fill % 25 == 0 ? fill - 1 : fill} // Bug spacing of 25 will not have a flat linecap on one of the ends
-                        tintColor="#3399FF"
-                        backgroundColor="#999"
+                        tintColor={tintColor}
+                        backgroundColor="#C2CAF2"
                         rotation={fill % 25 == 0 ? 1 : 0}
                         lineCap="round"
                         fillLineCap="round"
                         duration={2000}
-                        >
+                    >
                         {
                             () => (
-                                <Text style={{fontWeight: 'bold'}}>{item.current}/{item.max}</Text>
+                                <Text style={{ fontWeight: 'bold' }}>{item.current}/{item.max}</Text>
                             )
                         }
                     </AnimatedCircularProgress>
@@ -90,7 +92,23 @@ const PanelTitleStyle = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-end',
         alignItems: 'center',
+        verticalAlign: 'middle',
         backgroundColor: colorDebug && 'red',
+    },
+    coinContainer: {
+        flexDirection: 'row',
+        borderRadius: 25,
+        paddingHorizontal: 10,
+        paddingVertical: 5,
+        verticalAlign: 'middle',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+        backgroundColor: '#ECECEC',
+    },
+    coinIcon: {
+        width: 20,
+        height: 20,
+        marginRight: 5,
     }
 });
 
@@ -109,7 +127,7 @@ const PanelStyle = StyleSheet.create({
 
 export default function ObjectivesPanel() {
     return (
-        <>
+        <View style={{ paddingHorizontal: 10 }}>
             {/* Objective Panel Title and Money */}
             <>
                 <View style={PanelTitleStyle.titleContainer}>
@@ -118,12 +136,20 @@ export default function ObjectivesPanel() {
                     </View>
                     <View>
                         <Text style={{
-                            fontSize: 18,
+                            fontSize: 16,
                             fontWeight: 'bold',
                         }}>My Daily Progress</Text>
                     </View>
                     <View style={PanelTitleStyle.rightContainer}>
-                        <Text>100 Points</Text>
+                        <View style={PanelTitleStyle.coinContainer}>
+                            <Image
+                                style={PanelTitleStyle.coinIcon}
+                                source={require('../../assets/coin.png')}
+                            />
+                            <Text style={{
+                                fontWeight: 'bold',
+                            }}>100</Text>
+                        </View>
                     </View>
                 </View>
             </>
@@ -138,6 +164,6 @@ export default function ObjectivesPanel() {
                     ))}
                 </View>
             </>
-        </>
+        </View>
     );
 };
