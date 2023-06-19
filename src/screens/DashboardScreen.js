@@ -12,7 +12,12 @@ const DashboardScreen = ({ navigation }) => {
 
   // Update Navigation Title
   useEffect(() => {
-    navigation.setOptions({ title: 'Welcome back, James!' });
+    navigation.setOptions({
+      title: 'Welcome back, James!',
+      headerStyle: {
+        backgroundColor: '#92B0FF',
+      },
+    });
   }, []);
 
   const [data, setData] = useState([]);
@@ -32,7 +37,6 @@ const DashboardScreen = ({ navigation }) => {
         {Object.keys(data).length > 0 && (
           <ScrollView>
             <View style={styles.dashboardcontainer}>
-
               <View style={styles.cardContainer}>
                 <ObjectivesPanel />
               </View>
