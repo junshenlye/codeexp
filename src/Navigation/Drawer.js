@@ -3,8 +3,10 @@ import { View, Text, Linking } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
 
 import DashboardScreen from '../screens/DashboardScreen';
-import LoginScreen from '../screens/LoginScreen';
 import CareerLandScreen from '../screens/CareerLandScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+
+import LoginScreen from '../screens/LoginScreen';
 
 const DrawerTabs = [{
   name: "Dashboard",
@@ -20,7 +22,7 @@ const DrawerTabs = [{
 },
 {
   name: "Profile",
-  component: LoginScreen
+  component: ProfileScreen
 },
 {
   name: "Reward Shop",
@@ -31,7 +33,7 @@ function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <Text style={{ textAlign: "center", fontWeight:"bold", textDecorationLine: 'underline', padding: 25 }}>
-        Navigation Menu
+        Skillhub Menu
       </Text>
       <DrawerItemList {...props} />
       <DrawerItem
