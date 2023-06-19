@@ -3,14 +3,10 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginHorizontal: 20,
-    marginBottom: 15,
   },
 
   dashboardcontainer: {
     flex: 1,
-    marginTop: 15,
-    marginHorizontal: 20,
   },
  
   cardContainer: {

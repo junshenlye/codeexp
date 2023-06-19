@@ -26,6 +26,8 @@ const ObjectiveStyle = StyleSheet.create({
         justifyContent: "center",
         flexDirection: "column",
         backgroundColor: colorDebug && "#7CA1B4",
+        width: '100%',
+        height: '100%' 
     },
     item: {
         backgroundColor: colorDebug && "#7cb48f",
@@ -115,7 +117,6 @@ const PanelTitleStyle = StyleSheet.create({
 const PanelStyle = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
         justifyContent: "space-between",
         flexDirection: "row",
         backgroundColor: colorDebug && "pink"
@@ -127,7 +128,7 @@ const PanelStyle = StyleSheet.create({
 
 export default function ObjectivesPanel() {
     return (
-        <View style={{ paddingHorizontal: 10 }}>
+        <View style={{ width: '100%', height: '100%', paddingHorizontal: 10 }}>
             {/* Objective Panel Title and Money */}
             <>
                 <View style={PanelTitleStyle.titleContainer}>
@@ -138,7 +139,7 @@ export default function ObjectivesPanel() {
                         <Text style={{
                             fontSize: 16,
                             fontWeight: 'bold',
-                        }}>My Daily Progress</Text>
+                        }}>Daily Goals</Text>
                     </View>
                     <View style={PanelTitleStyle.rightContainer}>
                         <View style={PanelTitleStyle.coinContainer}>
