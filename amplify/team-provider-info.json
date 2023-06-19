@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-codeexp-dev-195708-authRole",
+      "UnauthRoleArn": "arn:aws:iam::783998833231:role/amplify-codeexp-dev-195708-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::783998833231:role/amplify-codeexp-dev-195708-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-codeexp-dev-195708-deployment",
+      "UnauthRoleName": "amplify-codeexp-dev-195708-unauthRole",
+      "StackName": "amplify-codeexp-dev-195708",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:783998833231:stack/amplify-codeexp-dev-195708/405de230-0dcf-11ee-bf4d-0aaf9a3c14b8",
+      "AmplifyAppId": "d3j7r5bkjll67x"
+    },
+    "categories": {
+      "auth": {
+        "codeexp81886cf2": {}
+      }
+    }
+  }
+}
