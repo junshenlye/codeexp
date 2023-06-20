@@ -1,6 +1,7 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from '../CareerLand/RecommendationStyle'; // Import the styles object from styles.js
+import image from '../../assets/back.png';
 
 const RecommendationScreen = ({ navigation }) => {
   const handleBackPress = () => {
@@ -12,7 +13,7 @@ const RecommendationScreen = ({ navigation }) => {
       {/* Header */}
       <View style={styles.headerContainer}>
         <TouchableOpacity onPress={handleBackPress} style={styles.backButton}>
-          <Text>Back</Text>
+          <Image source={image}/>
         </TouchableOpacity>
       </View>
 
