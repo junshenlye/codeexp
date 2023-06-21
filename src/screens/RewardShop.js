@@ -119,6 +119,9 @@ export default function RewardShop({ navigation }) {
     useEffect(() => {
         navigation.setOptions({
             headerTransparent: true,
+            headerTitleStyle: {
+              color: '#8590C8'
+            },
             headerRight: () => (
                 <View style={{...styles.coinContainer, marginRight: 20}}>
                     <Image
