@@ -49,7 +49,7 @@ function Objective({ item }) {
         async function resetGoals() {
             await updateStats(item.name, item.default);
         }
-        // resetGoals();
+        //resetGoals();
 
         async function updatePanel() {
             setStatsCount(Math.min(await getStats(item.name, item.default), item.max));

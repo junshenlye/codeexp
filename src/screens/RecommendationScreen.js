@@ -17,6 +17,10 @@ const RecommendationScreen = ({ navigation }) => {
           <Text style={styles.text}>You also focus on expanding and retaining the client base through innovative approaches. By fostering strong relationships, providing excellent service, and staying updated with industry trends, you contribute to the growth and success of the firm.</Text>
         </View>
 
+        <View>
+          <Text></Text>
+        </View>
+
 
         <View style={styles.coursecontainer}>
           {data.map((item, index) => (
