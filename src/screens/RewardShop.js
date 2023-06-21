@@ -59,12 +59,12 @@ const rowFlexBoxStyle = StyleSheet.create({
 export default function RewardShop() {
     return (
         <ScrollView style={styles.container}>
-            {sectionData.map((section) => (<>
+            {sectionData.map((section) => (<View key={section.title}>
               <Text style={styles.sectionHeader}>{section.title}</Text>
               <View style={{...rowFlexBoxStyle.container, padding:10}}>
-                {section.data.map((item) => (<View style={styles.shopCard}><Text style={styles.item}>{item}</Text></View>))}
+                {section.data.map((item) => (<View key={item} style={styles.shopCard}><Text style={styles.item}>{item}</Text></View>))}
               </View>
-            </>))}
+            </View>))}
         </ScrollView>
     );
 }
