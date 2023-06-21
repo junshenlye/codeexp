@@ -37,7 +37,7 @@ const DashboardScreen = ({ navigation }) => {
                 <ScrollView>
                     <View style={styles.dashboardcontainer}>
                         <View style={styles.cardContainer}>
-                            <ObjectivesPanel navigation={navigation} />
+                            <ObjectivesPanel navigation={navigation} showBalance={true} />
                         </View>
                     </View>
                     {Object.keys(data).length > 0 && (
@@ -49,7 +49,7 @@ const DashboardScreen = ({ navigation }) => {
                                         <Image source={{ uri: article.urlToImage }} style={styles.image} />
                                     </View>
                                 </TouchableOpacity>
-                            )) || 'Failed to Load!'}
+                            )) || (<Text>Failed to Load!</Text>)}
                         </View>
                     )}
                 </ScrollView>
