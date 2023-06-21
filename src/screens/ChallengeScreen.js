@@ -90,7 +90,6 @@ const objectiveStyle = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     rightContainer: {
-        flex: 1,
         flexDirection: 'row',
         justifyContent: 'flex-end',
     },
@@ -127,7 +126,7 @@ function Objective({ item }) {
         <>
             <View style={objectiveStyle.container}>
                 <View style={objectiveStyle.leftContainer}>
-                    <Text style={{ paddingTop: paddingTopSpacer, fontWeight: 'bold' }}>{item.name}</Text>
+                    <Text style={{ paddingTop: paddingTopSpacer, fontWeight: 'bold' }}>{item.fullDetail}</Text>
                 </View>
                 <View style={objectiveStyle.rightContainer}>
                     <Text style={{ paddingTop: paddingTopSpacer, fontWeight: 'bold' }}>{statsCount}/{item.max}</Text>
@@ -137,7 +136,7 @@ function Objective({ item }) {
                 <ProgressBar progress={progress} color={color} width={null} />
             </View>
             <View style={objectiveStyle.container}>
-                <View style={objectiveStyle.rightContainer}>
+                <View style={{...objectiveStyle.rightContainer, flex: 1}}>
                     <View style={styles.coinContainer} >
                         <Text style={{ fontWeight: 'bold' }}>+{item.reward}</Text>
                         <Image
