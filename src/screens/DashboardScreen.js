@@ -6,6 +6,8 @@ import { styles } from '../Dashboard/DashboardStyles';
 
 import ObjectivesPanel from '../Dashboard/ObjectivesPanel';
 
+import { incrementStats } from '../_Tracking/Stats';
+
 const DashboardScreen = ({ navigation }) => {
     // Update Navigation Title
     useEffect(() => {
@@ -25,7 +27,8 @@ const DashboardScreen = ({ navigation }) => {
             .catch((err) => console.log(err));
     }, []);
 
-    const handleNewsPress = (url) => {
+    const handleNewsPress = async (url) => {
+        await incrementStats('Articles');
         Linking.openURL(url);
     };
     return (
