@@ -37,7 +37,9 @@ const RecommendationScreen = ({ navigation }) => {
         </Text>
     </View>
         </View>
-
+        <View style={styles.recommendationcontainer}>
+          <Text style={styles.recommendation}>Course Recommendation</Text>
+        </View>
         <View style={styles.coursecontainer}>
           {data.map((item, index) => (
             <TouchableOpacity
