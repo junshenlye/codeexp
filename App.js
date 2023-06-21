@@ -16,7 +16,7 @@ const App = () => {
             <NavigationContainer>
                 <Stack.Navigator>
                     <Stack.Screen name="NavigationDrawer" component={NavigationDrawer} options={{ headerShown: false }} />
-                    <Stack.Screen name="Recommendations" component={RecommendationScreen} options={{headerTitleAlign: 'center'}} />
+                    <Stack.Screen name="Recommendations" component={RecommendationScreen} options={{ headerTitleAlign: 'center' }} />
                 </Stack.Navigator>
             </NavigationContainer>
         </>
