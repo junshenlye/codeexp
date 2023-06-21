@@ -6,8 +6,8 @@ import image1 from '../../assets/image1.png';
 
 const checkpoints = [
   { id: 1, image: image1, heading: 'Client Management', top: 80, left: 43 },
-  { id: 2, image: image1, heading: 'Checkpoint 2', top: 80, left: 78 },
-  { id: 3, image: image1, heading: 'Checkpoint 3', top: -125, left: 0 }
+  { id: 2, image: image1, heading: 'Team Engagement', top: 80, left: 78 },
+  { id: 3, image: image1, heading: 'Assurance', top: -125, left: -20 }
 ]; // Example checkpoints
 
 const CareerLandScreen = ({ navigation }) => {
