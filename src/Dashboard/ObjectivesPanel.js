@@ -5,27 +5,12 @@ import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
 import { getStats, updateStats } from '../_Tracking/Stats';
 
+// Updated by Endpoint (This is Template Data)
+import ObjectivesArray from '../_Tracking/Goals';
+
 const colorDebug = false;
 const paddingTopSpacer = 10;
 
-// Updated by Endpoint (This is Template Data)
-const ObjectivesArray = [
-  {
-    name: 'Slap JS',
-    default: 2,
-    max: 4,
-  },
-  {
-    name: 'Articles',
-    default: 0,
-    max: 3,
-  },
-  {
-    name: 'Diary',
-    default: 1,
-    max: 1,
-  },
-];
 
 const ObjectiveStyle = StyleSheet.create({
   container: {
@@ -192,13 +177,13 @@ export default function ObjectivesPanel({ navigation }) {
       <View style={{ paddingTop: paddingTopSpacer }} />
       {/* Objective List */}
       <>
-        <View style={PanelStyle.container}>
+        <TouchableOpacity style={PanelStyle.container} onPress={() => navigation.navigate('Challenges')}>
           {ObjectivesArray.map((objectiveItem) => (
             <View key={objectiveItem.name} style={PanelStyle.item}>
               <Objective item={objectiveItem} />
             </View>
           ))}
-        </View>
+        </TouchableOpacity>
       </>
     </View>
   );
