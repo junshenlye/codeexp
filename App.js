@@ -11,19 +11,16 @@ import RecommendationScreen from './src/screens/RecommendationScreen';
 const Stack = createStackNavigator();
 
 const App = () => {
-  return (
-    <>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false
-          }}>
-          <Stack.Screen name="NavigationDrawer" component={NavigationDrawer} />
-          <Stack.Screen name="Recommendations" component={RecommendationScreen} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </>
-  );
+    return (
+        <>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="NavigationDrawer" component={NavigationDrawer} options={{ headerShown: false }} />
+                    <Stack.Screen name="Recommendations" component={RecommendationScreen} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </>
+    );
 };
 
 export default App;
