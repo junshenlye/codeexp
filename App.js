@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import NavigationDrawer from './src/Navigation/Drawer';
 import RecommendationScreen from './src/screens/RecommendationScreen';
+import LoginScreen from './src/screens/LoginScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,6 +16,7 @@ const App = () => {
         <>
             <NavigationContainer>
                 <Stack.Navigator>
+                    <Stack.Screen name="Selection" component={LoginScreen} options={{ headerShown: false }} />
                     <Stack.Screen name="NavigationDrawer" component={NavigationDrawer} options={{ headerShown: false }} />
                     <Stack.Screen name="Recommendations" component={RecommendationScreen} options={{ headerTitleAlign: 'center' }} />
                 </Stack.Navigator>
