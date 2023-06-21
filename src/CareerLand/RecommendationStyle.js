@@ -71,6 +71,15 @@ const styles = StyleSheet.create({
   tabText: {
     marginLeft: 10,
   },
+  recommendation:{
+    fontWeight: 'bold',
+    fontSize: 40,
+    textAlign: 'center',
+  },
+  recommendationcontainer:{
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   
 });
 
