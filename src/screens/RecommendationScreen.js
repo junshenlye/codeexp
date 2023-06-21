@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView, Linking } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView, Linking, FlatList } from 'react-native';
 import styles from '../CareerLand/RecommendationStyle'; // Import the styles object from styles.js
 
 const RecommendationScreen = ({ navigation }) => {
@@ -16,11 +16,27 @@ const RecommendationScreen = ({ navigation }) => {
           <Text></Text>
           <Text style={styles.text}>You also focus on expanding and retaining the client base through innovative approaches. By fostering strong relationships, providing excellent service, and staying updated with industry trends, you contribute to the growth and success of the firm.</Text>
         </View>
-
-        <View>
-          <Text></Text>
+        <View style={styles.contentContainer}>
+          <Text style={styles.title}>Key Pointers:</Text>
+            <View style={styles.container2}>
+        <Text style={styles.text2}>
+          <Text style={styles.bullet}>&#8226; </Text>
+          <Text style={styles.tabText}>Identify new ideas and business solutions to existing clients</Text>{'\n\n'}
+        </Text>
+        <Text style={styles.text2}>
+          <Text style={styles.bullet}>&#8226; </Text>
+          <Text style={styles.tabText}>Identify new ways to expand and retain client base</Text>{'\n\n'}
+        </Text>
+        <Text style={styles.text2}>
+          <Text style={styles.bullet}>&#8226; </Text>
+          <Text style={styles.tabText}>Manage client expectations and project timelines</Text>{'\n\n'}
+        </Text>
+        <Text style={styles.text2}>
+          <Text style={styles.bullet}>&#8226; </Text>
+          <Text style={styles.tabText}>Support and develop trusted business adviser relationships</Text>{'\n\n'}
+        </Text>
+    </View>
         </View>
-
 
         <View style={styles.coursecontainer}>
           {data.map((item, index) => (

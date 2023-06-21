@@ -43,12 +43,35 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginBottom: 8,
   },
   courseDate: {
     fontSize: 16,
     fontWeight: 'bold',
   },
+  keypointer:{
+    padding: 'left',
+    justifyContent: 'center',
+  },
+  container2: {
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  bullet: {
+    fontSize: 18,
+    lineHeight: 24,
+    marginRight: 5,
+  },
+  text2: {
+    fontSize: 18,
+    lineHeight: 24,
+  },
+  tabText: {
+    marginLeft: 10,
+  },
+  
 });
 
 export default styles;
