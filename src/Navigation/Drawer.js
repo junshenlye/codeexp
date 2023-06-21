@@ -57,6 +57,7 @@ const Drawer = createDrawerNavigator();
 function NavigationDrawer() {
   return (
     <Drawer.Navigator
+      backBehavior='history'
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         drawerStyle: {
