@@ -126,7 +126,7 @@ export default function ProfileScreen({ navigation }) {
                 textShadowRadius: 10
             },
             headerRight: () => (
-                <View style={{ ...styles.coinContainer, marginRight: 20 }}>
+                <TouchableOpacity style={{ ...styles.coinContainer, marginRight: 20 }} onPress={() => navigation.navigate('Reward Shop')}>
                     <Image
                         style={styles.coinIcon}
                         source={require('../../assets/coin.png')}
@@ -137,7 +137,7 @@ export default function ProfileScreen({ navigation }) {
                         }}>
                         100
                     </Text>
-                </View>
+                </TouchableOpacity>
             )
         });
     }, []);
