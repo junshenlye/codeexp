@@ -45,11 +45,11 @@ const ObjectiveStyle = StyleSheet.create({
 function Objective({ item }) {
   const [statsCount, setStatsCount] = useState(item.default);
 
-  useEffect(() => {
-    async function resetGoals() {
-      await updateStats(item.name, item.default);
-    }
-    // resetGoals();
+    useEffect(() => {
+        async function resetGoals() {
+            await updateStats(item.name, item.default);
+        }
+        // resetGoals();
 
     async function updatePanel() {
       setStatsCount(
