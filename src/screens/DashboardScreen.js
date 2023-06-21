@@ -37,7 +37,7 @@ const DashboardScreen = ({ navigation }) => {
                 <ScrollView>
                     <View style={styles.dashboardcontainer}>
                         <View style={styles.cardContainer}>
-                            <ObjectivesPanel />
+                            <ObjectivesPanel navigation={navigation} />
                         </View>
                     </View>
                     {Object.keys(data).length > 0 && (
