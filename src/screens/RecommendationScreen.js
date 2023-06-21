@@ -61,31 +61,31 @@ const RecommendationScreen = ({ navigation }) => {
 
 const data = [
   {
-    image: require('../../assets/courseimage1.jpg'),
-    title: 'Course 1',
-    courseDate: 'June 1, 2023',
-    url: 'https://www.google.com',
+    image: require('../../assets/courses/courseimage1.jpg'),
+    title: 'Enhance your influence and impact',
+    courseDate: 'June 27, 2023',
+    url: 'https://www.myskillsfuture.gov.sg/content/portal/en/training-exchange/course-directory/course-detail.html?courseReferenceNumber=TGS-2022016729',
   },
 
   {
-    image: require('../../assets/courseimage1.jpg'),
-    title: 'Course 1',
-    courseDate: 'June 1, 2023',
-    url: 'https://www.google.com',
+    image: require('../../assets/courses/courseimage2.jpg'),
+    title: 'Bounce Back Fast with Problem Solving',
+    courseDate: 'Nov 14, 2023',
+    url: 'https://www.myskillsfuture.gov.sg/content/portal/en/training-exchange/course-directory/course-detail.html?courseReferenceNumber=TGS-2023018869',
   },
 
   {
-    image: require('../../assets/courseimage1.jpg'),
-    title: 'Course 1',
-    courseDate: 'June 1, 2023',
-    url: 'https://www.google.com',
+    image: require('../../assets/courses/courseimage3.jpg'),
+    title: 'Lead with Passion',
+    courseDate: 'June 27, 2023',
+    url: 'https://www.myskillsfuture.gov.sg/content/portal/en/training-exchange/course-directory/course-detail.html?courseReferenceNumber=TGS-2023018454',
   },
 
   {
-    image: require('../../assets/courseimage1.jpg'),
-    title: 'Course 1',
-    courseDate: 'June 1, 2023',
-    url: 'https://www.google.com',
+    image: require('../../assets/courses/courseimage4.jpg'),
+    title: 'Presenting with Influence',
+    courseDate: 'June 23, 2023',
+    url: 'https://www.myskillsfuture.gov.sg/content/portal/en/training-exchange/course-directory/course-detail.html?courseReferenceNumber=TGS-2023017953',
   },
 ];
 

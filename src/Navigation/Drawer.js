@@ -8,7 +8,6 @@ import ProfileScreen from '../screens/ProfileScreen';
 import RewardShop from '../screens/RewardShop';
 import ChallengeScreen from '../screens/ChallengeScreen';
 
-import LoginScreen from '../screens/LoginScreen';
 
 const DrawerTabs = [{
   name: "Dashboard",
@@ -19,16 +18,12 @@ const DrawerTabs = [{
   component: CareerLandScreen
 },
 {
-  name: "Diary",
-  component: LoginScreen
+  name: "Challenges",
+  component: ChallengeScreen
 },
 {
   name: "Profile",
   component: ProfileScreen
-},
-{
-  name: "Challenges",
-  component: ChallengeScreen
 },
 {
   name: "Reward Shop",
