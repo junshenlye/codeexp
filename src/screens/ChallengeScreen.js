@@ -169,7 +169,7 @@ export default function ChallengeScreen({ navigation }) {
 
     return (
         <ImageBackground source={require('../../assets/backdrop/challenge.png')} resizeMode="cover" style={styles.image}>
-            <ScrollView style={{ ...styles.container, marginTop: useHeaderHeight() + 20, marginHorizontal: 20, marginBottom: 20 }}>
+            <ScrollView style={{ ...styles.container, marginTop: useHeaderHeight() + 20, paddingHorizontal: 20, paddingBottom: 20 }}>
                 <TouchableOpacity style={styles.card} onPress={() => navigation.navigate('Reward Shop')}>
                     <Text style={{ ...styles.textTitle }}>My Wallet</Text>
                     <View style={{ ...styles.bigCoinContainer, marginRight: 20, paddingTop: 10 }}>
