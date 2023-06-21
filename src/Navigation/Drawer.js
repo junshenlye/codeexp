@@ -6,6 +6,7 @@ import DashboardScreen from '../screens/DashboardScreen';
 import CareerLandScreen from '../screens/CareerLandScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import RewardShop from '../screens/RewardShop';
+import ChallengeScreen from '../screens/ChallengeScreen';
 
 import LoginScreen from '../screens/LoginScreen';
 
@@ -26,9 +27,14 @@ const DrawerTabs = [{
   component: ProfileScreen
 },
 {
+  name: "Challenges",
+  component: ChallengeScreen
+},
+{
   name: "Reward Shop",
   component: RewardShop
-}]
+}
+]
 
 function CustomDrawerContent(props) {
   return (

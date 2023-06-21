@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     sectionHeader: {
         color: '#8590C8',
         paddingTop: 2,
-        paddingLeft: 10,
-        paddingRight: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
         paddingBottom: 2,
         fontSize: 14,
         fontWeight: 'bold',
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         width: '44%',
         borderRadius: 35,
         backgroundColor: 'rgba(255,255,255,0.05)',
-        borderColor: "rgba(0,0,0,0.1)",
+        borderColor: "rgba(0,0,0,0.2)",
         borderWidth: 0.4,
         alignContent: 'center',
         justifyContent: 'center',
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'flex-end',
         backgroundColor: 'rgba(255,255,255,0.05)',
-        borderColor: "rgba(0,0,0,0.1)",
+        borderColor: "rgba(0,0,0,0.2)",
         borderWidth: 0.4
     },
     coinIcon: {
