@@ -52,12 +52,12 @@ const rowFlexBoxStyle = StyleSheet.create({
 function StatsPanel() {
     return (<View style={{ ...columnFlexBoxStyle.container, justifyContent: 'space-evenly', alignItems: 'center', height: 300 }}>
         <View style={columnFlexBoxStyle.item}>
-            <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Articles Read</Text>
-            <Text style={{ textAlign: 'center' }}>90</Text>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>Articles Read</Text>
+            <Text style={{ fontSize: 18,textAlign: 'center' }}>90</Text>
         </View>
         <View style={columnFlexBoxStyle.item}>
-            <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Diary Entries</Text>
-            <Text style={{ textAlign: 'center' }}>5</Text>
+            <Text style={{ fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>Challenges Completed</Text>
+            <Text style={{ fontSize: 18, textAlign: 'center' }}>5</Text>
         </View>
     </View>)
 }
@@ -99,8 +99,6 @@ export default function ProfileScreen({ navigation }) {
             <View style={{ ...cardStyle.item }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Recent Badges</Text>
                 <Text> </Text>
-                <Text>2 NO</Text>
-                <Text>2 NO</Text>
                 <Text>2 NO</Text>
                 <Text>2 NO</Text>
                 <Text>2 NO</Text>
