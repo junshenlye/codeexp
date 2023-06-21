@@ -11,10 +11,13 @@ const RecommendationScreen = ({ navigation }) => {
     <View style={styles.container}>
       <ScrollView>
         <View style={styles.contentContainer}>
-          <Text style={styles.text}>Description:</Text>
+          <Text style={styles.title}>Description:</Text>
+          <Text style={styles.text}>As an accountancy and audit manager at CCS, your role is to manage clients effectively by identifying new ideas and business solutions for their needs.</Text>
+          <Text></Text>
+          <Text style={styles.text}>You also focus on expanding and retaining the client base through innovative approaches. By fostering strong relationships, providing excellent service, and staying updated with industry trends, you contribute to the growth and success of the firm.</Text>
         </View>
 
-        
+
         <View style={styles.coursecontainer}>
           {data.map((item, index) => (
             <TouchableOpacity

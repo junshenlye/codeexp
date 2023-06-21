@@ -15,9 +15,10 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   text: {
-    fontSize: 18,
+    fontSize: 15,
     textAlign: 'left',
-    textDecorationLine: 'underline',
+    lineHeight: 20,
+    // textDecorationLine: 'underline',
   },
   coursecontainer:{
     flex: 1,
