@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView, Linking, FlatList } from 'react-native';
+import { View, Text, TouchableOpacity, Image, ScrollView, Linking } from 'react-native';
 import styles from '../CareerLand/RecommendationStyle'; // Import the styles object from styles.js
 
 const RecommendationScreen = ({ navigation }) => {
