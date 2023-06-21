@@ -1,41 +1,68 @@
+import { useState, useEffect } from 'react';
+
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
+
+import { getStats, updateStats } from '../_Tracking/Stats';
 
 const colorDebug = false;
 const paddingTopSpacer = 10;
 
 // Updated by Endpoint (This is Template Data)
-const ObjectivesArray = [{
-    name: "Login",
-    current: 2,
-    max: 4,
-}, {
-    name: "Articles",
-    current: 1,
-    max: 3,
-}, {
-    name: "Diary",
-    current: 1,
-    max: 1,
-}]
+const ObjectivesArray = [
+    {
+        name: 'Slap JS',
+        default: 2,
+        max: 4,
+    },
+    {
+        name: 'Articles',
+        default: 0,
+        max: 3,
+    },
+    {
+        name: 'Diary',
+        default: 1,
+        max: 1,
+    },
+];
 
 const ObjectiveStyle = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        backgroundColor: colorDebug && "#7CA1B4",
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        backgroundColor: colorDebug && '#7CA1B4',
         width: '100%',
-        height: '100%' 
+        height: '100%',
     },
     item: {
-        backgroundColor: colorDebug && "#7cb48f",
+        backgroundColor: colorDebug && '#7cb48f',
     },
 });
 
 function Objective({ item }) {
-    const fill = Math.round((item.current / item.max) * 100);
+    const [statsCount, setStatsCount] = useState(item.default);
+
+    useEffect(() => {
+        async function resetGoals() {
+            await updateStats(item.name, item.default);
+        }
+        // resetGoals();
+
+        async function updatePanel() {
+            setStatsCount(Math.min(await getStats(item.name, item.default), item.max));
+        }
+
+        const refreshInterval = setInterval(updatePanel, 500);
+
+        return () => {
+            clearInterval(refreshInterval);
+        };
+    }, [item.default, item.name, statsCount]);
+
+    const fill = Math.round((statsCount / item.max) * 100);
 
     const tintColor = fill == 100 ? '#4C5EB7' : '#8590C8';
     return (
@@ -54,11 +81,11 @@ function Objective({ item }) {
                         fillLineCap="round"
                         duration={2000}
                     >
-                        {
-                            () => (
-                                <Text style={{ fontWeight: 'bold' }}>{item.current}/{item.max}</Text>
-                            )
-                        }
+                        {() => (
+                            <Text style={{ fontWeight: 'bold' }}>
+                                {statsCount}/{item.max}
+                            </Text>
+                        )}
                     </AnimatedCircularProgress>
                 </View>
                 <View style={ObjectiveStyle.item}>
@@ -67,7 +94,6 @@ function Objective({ item }) {
             </View>
         </>
     );
-
 }
 
 const PanelTitleStyle = StyleSheet.create({
@@ -81,13 +107,13 @@ const PanelTitleStyle = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'flex-start',
-        backgroundColor: colorDebug && 'green'
+        backgroundColor: colorDebug && 'green',
     },
     centerContainer: {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'center',
-        backgroundColor: colorDebug && 'yellow'
+        backgroundColor: colorDebug && 'yellow',
     },
     rightContainer: {
         flex: 1,
@@ -111,18 +137,18 @@ const PanelTitleStyle = StyleSheet.create({
         width: 20,
         height: 20,
         marginRight: 5,
-    }
+    },
 });
 
 const PanelStyle = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: "space-between",
-        flexDirection: "row",
-        backgroundColor: colorDebug && "pink"
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        backgroundColor: colorDebug && 'pink',
     },
     item: {
-        backgroundColor: colorDebug && "yellow",
+        backgroundColor: colorDebug && 'yellow',
     },
 });
 
@@ -132,24 +158,27 @@ export default function ObjectivesPanel() {
             {/* Objective Panel Title and Money */}
             <>
                 <View style={PanelTitleStyle.titleContainer}>
-                    <View style={PanelTitleStyle.leftContainer}>
-                        {/* Left empty for alignment */}
-                    </View>
+                    <View style={PanelTitleStyle.leftContainer}>{/* Left empty for alignment */}</View>
                     <View>
-                        <Text style={{
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        }}>Daily Goals</Text>
+                        <Text
+                            style={{
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            }}
+                        >
+                            Daily Goals
+                        </Text>
                     </View>
                     <View style={PanelTitleStyle.rightContainer}>
                         <View style={PanelTitleStyle.coinContainer}>
-                            <Image
-                                style={PanelTitleStyle.coinIcon}
-                                source={require('../../assets/coin.png')}
-                            />
-                            <Text style={{
-                                fontWeight: 'bold',
-                            }}>100</Text>
+                            <Image style={PanelTitleStyle.coinIcon} source={require('../../assets/coin.png')} />
+                            <Text
+                                style={{
+                                    fontWeight: 'bold',
+                                }}
+                            >
+                                100
+                            </Text>
                         </View>
                     </View>
                 </View>
@@ -167,4 +196,4 @@ export default function ObjectivesPanel() {
             </>
         </View>
     );
-};
+}
