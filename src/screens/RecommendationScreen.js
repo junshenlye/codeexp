@@ -29,20 +29,23 @@ const RecommendationScreen = ({ navigation }) => {
   );
 };
 
-const data = [
-  {
-    image: require('./path/to/image1.jpg'),
-    title: 'Course 1',
-    courseDate: 'June 1, 2023',
-    url: 'https://example.com/course1',
-  },
-  {
-    image: require('./path/to/image2.jpg'),
-    title: 'Course 2',
-    courseDate: 'June 15, 2023',
-    url: 'https://example.com/course2',
-  },
-];
+
+
+// const data = [
+//   {
+//     image: require('./path/to/image1.jpg'),
+//     title: 'Course 1',
+//     courseDate: 'June 1, 2023',
+//     url: 'https://example.com/course1',
+//   },
+//   {
+//     image: require('./path/to/image2.jpg'),
+//     title: 'Course 2',
+//     courseDate: 'June 15, 2023',
+//     url: 'https://example.com/course2',
+//   },
+//   // Add more data items as needed
+// ];
 
 export default RecommendationScreen;
 
