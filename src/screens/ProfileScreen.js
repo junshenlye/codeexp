@@ -94,7 +94,7 @@ export default function ProfileScreen({ navigation }) {
                 <StatsAndCharacterPanel />
             </View>
             <View style={{ ...cardStyle.item }}>
-                <ObjectivesPanel />
+                <ObjectivesPanel navigation={navigation} />
             </View>
             <View style={{ ...cardStyle.item }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold' }}>Recent Badges</Text>

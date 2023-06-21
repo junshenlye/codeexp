@@ -5,6 +5,7 @@ import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerI
 import DashboardScreen from '../screens/DashboardScreen';
 import CareerLandScreen from '../screens/CareerLandScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import RewardShop from '../screens/RewardShop';
 
 import LoginScreen from '../screens/LoginScreen';
 
@@ -26,7 +27,7 @@ const DrawerTabs = [{
 },
 {
   name: "Reward Shop",
-  component: LoginScreen
+  component: RewardShop
 }]
 
 function CustomDrawerContent(props) {
