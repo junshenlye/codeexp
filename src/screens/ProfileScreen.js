@@ -70,7 +70,7 @@ function StatsAndCharacterPanel() {
         <View style={{ ...rowFlexBoxStyle.item, width: "50%"}}>
                 <Image
                     style={{width: 141, height: 280, margin: 10}}
-                    source={require('../../assets/skinnyMan.png')}
+                    source={require('../../assets/profile/character.png')}
                 />
         </View>
     </View>)
