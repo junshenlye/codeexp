@@ -7,7 +7,9 @@ DSTA CodeExp Finalist Hackathon Team 19 category 2 (Poly & Uni)
 A Upskilling Educational Platform that aims to keep their users in the loop based on their job industry and job title. The platform features are such as loading news api and gamification features like careerland, challenges, reward shop and profile. This application is built on React Native.
 
 # Figma Prototype
+Design
 ![image](https://github.com/junshenlye/codeexp/assets/69711881/eceb121f-5704-46e0-8682-13204102f197)
+Prototype
 ![image](https://github.com/junshenlye/codeexp/assets/69711881/7da32e06-66e6-4350-a712-861c674cba3c)
 
 
